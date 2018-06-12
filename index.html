@@ -29,10 +29,12 @@
           'callback': (response) => {
             // reCAPTCHA solved, allow signInWithPhoneNumber.
             // ...
+            console.log('captcha solved');
           },
           'expired-callback': () => {
             // Response expired. Ask user to solve reCAPTCHA again.
             // ...
+              console.log('captcha incorrect');
           }
         })
         window.recaptchaVerifier.render()
